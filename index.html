@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pastelería - Bienvenida</title>
+    <link rel="stylesheet" href="EstiloPas.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.jpg" alt="LOGO"><br>
+    <h1><center>Mi Pastelería</center></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Bienvenida</a></li>
+        <li><a href="pasteles.html">Pasteles</a></li>
+        <li><a href="pedido.html">Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>¡Bienvenidos a Mi Pastelería!</h2>
+    <p>En nuestra pastelería, elaboramos pasteles con ingredientes de alta calidad y mucho amor.  Descubre nuestra variedad de deliciosos pasteles.</p>
+  </main>
+
+
+    <script language="JavaScript">
+        alert("¡Bienvenido a Mi Pastelería!")
+    </script>
+
+    <center><img src="img/chocolate.jpg" alt="" onmouseover="Chocolate();" onmouseout="Cafe();" id="i"></center>
+        <script>
+            function Chocolate() {
+            document.getElementById("i").setAttribute('src','img/chocolate.jpg');
+        }
+            function Cafe() {
+            document.getElementById("i").setAttribute('src','img/cafe.jpg');
+        }
+             
+        </script>
+        <br>
+        <br>
+        <br>
+        <br>
+<p>Aqui puedes escribir algo para el sitio</p>
+
+    <input type="texto" onkeydown="ejemplo(this);">
+    <p id="pf"></p>
+    <script>
+        function ejemplo(x) {
+            document.getElementById("pf").innerHTML=x.value;
+        }
+    </script>        
+
+    <footer>
+        <br>
+        <p>&copy;2025. Todos los derechos reservados.</p>
+        <br>
+        <p>Janeth Perez</p>
+    </footer>       
+</body>
+</html>

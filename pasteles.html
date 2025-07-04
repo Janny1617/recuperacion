@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pastelería</title>
+    <link rel="stylesheet" href="EstiloPas.css">
+</head>
+<body onload="ejemplo();">
+  <header>
+    <img src="img/logo.jpg" alt="LOGO"><br>
+    <h1><center>Mi Pastelería</center></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Bienvenida</a></li>
+        <li><a href="pasteles.html">Pasteles</a></li>
+        <li><a href="pedido.html">Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    function ejemplo(){
+        alert("Termino de cargar la pagina...");
+    }
+    </script>
+
+  <main>
+    <h2>Nuestros Deliciosos Pasteles</h2>
+    <p>En este apartado encontraras algunos de nuestros pasteles.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Pastel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pastel Tres Leches de Vainilla con Fresas</td>
+          <td>Un esponjoso pastel de vainilla, empapado en una mezcla de tres leches 
+            (leche evaporada, leche condensada y crema de leche), cubierto con una generosa
+            capa de fresas frescas y maceradas en un ligero jarabe de azúcar y menta.  La suavidad 
+            del pastel contrasta con la acidez refrescante de las fresas, creando una experiencia deliciosa y equilibrada. 
+            Se decora con hojas de menta fresca y un ligero espolvoreo de azúcar glass.</td>
+          <td>$300</td>
+        <td><img src="img/fresa.jpg" alt="" onmouseover="fresa();" id="i">
+        <script>
+            function fresa() {
+            document.getElementById("i").setAttribute('src','img/pastelfre.jpeg');
+        }
+        </script>
+        </td>
+        </tr>
+        <tr>
+          <td>Pastel de Chocolate Abuelita con Chili</td>
+          <td>Un intenso pastel de chocolate oscuro, elaborado con auténtica tableta de chocolate Abuelita, 
+            con un toque sutil pero delicioso de chile en polvo. La combinación del chocolate amargo y el picante 
+            del chile crea una experiencia inesperada y adictiva.  Se decora con una ganache de chocolate amargo y 
+            un toque final de escamas de chile.  Ideal para los amantes del chocolate con un toque de aventura.</td>
+          <td>$250</td>
+          <td><img src="img/pastelcho.jpeg"></td>
+        </tr>
+          <td>Pastel de Zanahoria con Crema de Queso y Nueces</td>
+          <td>Un clásico pastel de zanahoria, húmedo y lleno de sabor, con una generosa capa de crema de 
+            queso casera y nueces picadas. La textura húmeda y esponjosa del pastel se complementa perfectamente 
+            con la cremosidad de la crema de queso y el crujido de las nueces. Se decora con nueces caramelizadas 
+            y un toque de canela.</td>
+          <td>$350</td>
+          <td><img src="img/pastelzana.jpeg"></td>
+        </tr>
+          <td>Pastel de Limón y Amapola</td>
+          <td>Un ligero y refrescante pastel de limón con semillas de amapola incrustadas en la masa. 
+            El sabor cítrico del limón se equilibra con la textura ligeramente crujiente de las semillas de amapola.  
+            Se cubre con un glaseado de limón y se decora con rodajas de limón confitado. Perfecto para un día caluroso</td>
+          <td>$420</td>
+          <td><img src="img/pastellimon.jpeg"></td>
+        </tr>
+        <tr>
+          <td>Pastel de Fresa</td>
+          <td>Pastel esponjoso con fresas frescas. El pastel de fresa es un postre popular que combina un bizcocho 
+            o base similar con fresas frescas y una crema (batida, pastelera, o de queso).  Su sabor es dulce y refrescante, 
+            con la textura variando entre esponjosa y crujiente, dependiendo de la receta.  Es versátil y apropiado para diversas 
+            ocasiones</td>
+          <td>$280</td>
+        <td><img src="img/pastelfre.jpeg"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <button onclick="mensaje();">Haz click</button>
+
+    <script>
+        function mensaje() {
+            alert("Pasteleria!");
+        }
+    </script>
+
+
+    <footer>
+        <br>
+        <p>&copy;2025. Todos los derechos reservados.</p>
+        <br>
+        <p>Janeth Perez</p>
+    </footer>   
+</body>
+</html>

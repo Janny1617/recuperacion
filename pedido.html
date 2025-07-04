@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pastelería</title>
+    <link rel="stylesheet" href="EstiloPas.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.jpg" alt="LOGO"><br>
+    <h1><center>Mi Pastelería</center></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Bienvenida</a></li>
+        <li><a href="pasteles.html">Pasteles</a></li>
+        <li><a href="pedido.html">Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+        <center><h2>Hora actual:<br>
+        <script>
+            let d = new Date();
+            document.body.innerHTML = document.body.innerHTML + "<br><h1>Hora actual es: " + d.getHours() + ":" + 
+            d.getMinutes() + ":" + d.getSeconds() + "</h1><br>";
+        </script>
+        </h2></center>
+
+  <main>
+
+ <h1>Realiza tu Pedido en este apartado</h2>
+
+    <section>
+    <p>Aqui puedes realizar tu pedido de tu pastel para tus eventos: </p>
+
+    <form id="form-insertar" name="form-insertar" method="GET" action="insertar.php">
+
+      <label for="Num_Pastel">Numero de pastel: </label>
+      <input type="number" name="Num_Pastel" id="Num_Pastel" placeholder="" required>
+    <br>
+      <br>
+      <label for="NombreC">Nombre del cliente:</label>
+      <input type="text" id="NombreC" name="NombreC" onkeydown="mostrarTecla(event)">
+    <br>
+      <br>
+      <label for="Pastel">Pastel:</label>
+      <select id="pastel" name="Pastel" onchange="mostrarPastel()">
+        <option value="chocolate">Pastel de chocolate</option>
+        <option value="fresa">Pastel de fresa</option>
+      </select>
+      <br>
+      <br>
+      <label for="NomPastel">Nombre del pastel: </label>
+      <input type="text" name="NomPastel" id="NomPastel" placeholder="" required>
+    <br>
+      <br>
+      <label for="Precio">Precio:</label>
+      <input type="number" id="Precio" name="Precio">
+      <br>
+      <br>
+      <label for="CantidadP">Cantidad de personas: </label>
+      <input type="text" name="CantidadP" id="CantidadP" placeholder="" required>
+    <br>
+      <br>
+      <input type="submit" name="Enviar Pedido" id= "Enviar Pedido" value="Enviar Pedido">
+      <br>
+      <br>            
+      <p id="tecla"></p>
+      <p id="pastelSeleccionado"></p>
+    </form>
+  </main>
+
+  </section>
+
+   <h1>Elimina tu Pedido en este apartado</h2>
+
+<section>
+    <p>Aqui puedes eliminar tu pedido de tu pastel: </p>
+
+    <form id="form-insertar" name="form-insertar" method="GET" action="eliminar.php">
+
+      <label for="Num_Pastel">Numero de pastel: </label>
+      <input type="number" name="Num_Pastel" id="Num_Pastel" placeholder="" required>
+    <br>
+      <br>
+      <input type="submit" name="Eliminar Pedido" id= "Eliminar Pedido" value="Eliminar Pedido">
+      <br>
+      <br>            
+      <p id="tecla"></p>
+
+  </section>
+
+
+  <script>
+    function mostrarTecla(event) {
+      let tecla = document.getElementById("tecla");
+      tecla.textContent = "Presionaste la tecla: " + event.key;
+    }
+
+    function mostrarPastel() {
+      let pastelSeleccionado = document.getElementById("pastelSeleccionado");
+      let pastel = document.getElementById("pastel");
+      pastelSeleccionado.textContent = "Pastel seleccionado: " + pastel.value;
+    }
+  </script>
+
+    <footer>
+        <br>
+        <p>&copy;2025. Todos los derechos reservados.</p>
+        <br>
+        <p>Janeth Perez</p>
+    </footer>  
+</body>
+</html>
